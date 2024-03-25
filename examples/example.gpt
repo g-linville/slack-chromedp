@@ -1,0 +1,3 @@
+tools: github.com/g-linville/slack-chromedp
+
+Find messages about <query> in the channel called <channel name> in the workspace <workspace URL (prefixed with https://)>

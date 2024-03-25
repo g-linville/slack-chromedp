@@ -1,0 +1,37 @@
+export: slack_search, slack_list_channels, slack_list_users, slack_send_message
+description: A toolset that can be used to browse and send messages in a Slack workspace.
+
+---
+name: slack_search
+description: Searches Slack for messages matching the query.
+args: workspaceURL: the URL of the Slack workspace
+args: query: the query to search for
+args: dataDir: (optional) The Chrome data directory. Defaults to the default profile.
+
+#!${GPTSCRIPT_TOOL_DIR}/bin/gptscript-go-tool search "${GPTSCRIPT_INPUT}"
+
+---
+name: slack_list_channels
+description: Lists all channels in a Slack workspace.
+args: workspaceURL: the URL of the Slack workspace
+args: dataDir: (optional) The Chrome data directory. Defaults to the default profile.
+
+#!${GPTSCRIPT_TOOL_DIR}/bin/gptscript-go-tool list_channels "${GPTSCRIPT_INPUT}"
+
+---
+name: slack_list_users
+description: Lists all users in a Slack workspace.
+args: workspaceURL: the URL of the Slack workspace
+args: dataDir: (optional) The Chrome data directory. Defaults to the default profile.
+
+#!${GPTSCRIPT_TOOL_DIR}/bin/gptscript-go-tool list_users "${GPTSCRIPT_INPUT}"
+
+---
+name: slack_send_message
+description: Sends a message to a Slack channel or user.
+args: workspaceURL: the URL of the Slack workspace
+args: channel: the channel or user to send the message to
+args: message: the message to send
+args: dataDir: (optional) The Chrome data directory. Defaults to the default profile.
+
+#!${GPTSCRIPT_TOOL_DIR}/bin/gptscript-go-tool send_message "${GPTSCRIPT_INPUT}"
